@@ -1,9 +1,3 @@
-//
-//  UIColor+ANDYHex.m
-//
-//  Copyright (c) 2014 Elvis Nuñez. All rights reserved.
-//
-
 #import "UIColor+ANDYHex.h"
 
 @implementation UIColor (ANDYHex)
