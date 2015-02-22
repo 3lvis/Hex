@@ -1,6 +1,3 @@
-UIColor-Hex
-===============
-
 # Installation
 
 ```ruby
