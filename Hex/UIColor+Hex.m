@@ -1,6 +1,6 @@
-#import "UIColor+ANDYHex.h"
+#import "UIColor+Hex.h"
 
-@implementation UIColor (HEX)
+@implementation UIColor (Hex)
 
 + (UIColor *)colorFromHex:(NSString *)hexString
 {
