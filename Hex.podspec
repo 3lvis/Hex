@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
     :git => 'https://github.com/NSElvis/Hex.git',
     :tag => s.version.to_s
   }
-  s.source_files = 'Hex'
+  s.source_files = 'Hex/'
   s.frameworks = 'UIKit'
   s.requires_arc = true
 end
