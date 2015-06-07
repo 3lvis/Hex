@@ -8,5 +8,5 @@ pod 'Hex'
 ``` objc
 import Hex
 
-let redColor = UIColor(hex: "#FF0000")
+let redColor = UIColor(hex: "FF0000")
 ```
