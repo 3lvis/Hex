@@ -1,7 +1,7 @@
 import UIKit
 
 extension UIColor {
-    convenience init(hex: String) {
+    public convenience init(hex: String) {
         let noHasString = hex.stringByReplacingOccurrencesOfString(
             "#",
             withString: "")
