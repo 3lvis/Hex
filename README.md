@@ -6,7 +6,7 @@ pod 'Hex'
 
 # Usage
 ``` objc
-#import "UIColor+Hex.h"
+import UIColor_Hex
 
-+ (UIColor *)colorFromHexString:(NSString *)hexString;
+let redColor = UIColor(hex: "#FF0000")
 ```
