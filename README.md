@@ -6,7 +6,7 @@ pod 'Hex'
 
 # Usage
 ``` objc
-import UIColor_Hex
+import Hex
 
 let redColor = UIColor(hex: "#FF0000")
 ```
