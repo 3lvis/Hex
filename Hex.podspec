@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "Hex"
-  s.version = "1.1.1"
+  s.version = "2.0"
   s.summary = "Create colors using hexadecimal (HEX)"
   s.description = <<-DESC
                    * A category on UIColor that adds support for hexadecimal (hex)
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   }
   s.author = { "Elvis Nuñez" => "elvisnunez@me.com" }
   s.social_media_url = "http://twitter.com/3lvis"
-  s.platform = :ios, '6.0'
+  s.platform = :ios, '8.0'
   s.source = {
     :git => 'https://github.com/3lvis/Hex.git',
     :tag => s.version.to_s
