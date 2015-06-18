@@ -1,6 +1,8 @@
 # Installation
 
 ```ruby
+use_frameworks!
+
 pod 'Hex'
 ```
 
