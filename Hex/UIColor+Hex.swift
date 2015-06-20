@@ -28,4 +28,8 @@ extension UIColor {
                 alpha: 0.0)
         }
     }
+
+    public class func colorFromHex(hex: String) -> UIColor {
+        return UIColor(hex: hex)
+    }
 }
