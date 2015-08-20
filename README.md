@@ -28,3 +28,17 @@ let redColor = UIColor(hex: "FF0000")
 
 UIColor *color = [UIColor colorFromHex:@"FF0000"];
 ```
+
+## Be Awesome
+
+If something looks stupid, please create a friendly and constructive issue, getting your feedback would be awesome. 
+
+Have a great day.
+
+## Author
+
+Elvis Nuñez, [@3lvis](https://twitter.com/3lvis)
+
+## License
+
+**Hex** is available under the MIT license. See the LICENSE file for more info.
