@@ -24,7 +24,7 @@ let redColor = UIColor(hex: "FF0000")
 ## Objective-C
 
 ```objc
-#import "Hex.h"
+@import Hex;
 
-UIColor *color = [UIColor colorFromHexString:@"FF0000"];
+UIColor *color = [UIColor colorFromHex:@"FF0000"];
 ```
