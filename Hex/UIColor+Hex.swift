@@ -22,5 +22,3 @@ extension UIColor {
         return UIColor(hex: hex)
     }
 }
-
-let color = UIColor(hex: "FFFFFF")
