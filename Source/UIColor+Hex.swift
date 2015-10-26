@@ -1,6 +1,10 @@
 import UIKit
 
 extension UIColor {
+    /**
+     Base initializer, it creates an instance of `UIColor` using an HEX string.
+     - parameter hex: The base HEX string to create the color.
+     */
     public convenience init(hex: String) {
         let noHasString = hex.stringByReplacingOccurrencesOfString("#", withString: "")
         let scanner = NSScanner(string: noHasString)
@@ -32,6 +36,11 @@ extension UIColor {
         return self
     }
 
+    /**
+     Checks if two colors are equal.
+     - parameter color: The color to compare.
+     - returns: `true` if the colors are equal.
+     */
     public func isEqualToColor(color: UIColor) -> Bool {
         let selfColor = self.convertToRGBSpace(self)
         let otherColor = self.convertToRGBSpace(color)
