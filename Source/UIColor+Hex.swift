@@ -21,4 +21,25 @@ extension UIColor {
     public class func colorFromHex(hex: String) -> UIColor {
         return UIColor(hex: hex)
     }
+
+    internal func convertToRGBSpace(color: UIColor) -> UIColor {
+        let colorSpaceRGB = CGColorSpaceCreateDeviceRGB()
+
+        if  CGColorSpaceGetModel(CGColorGetColorSpace(color.CGColor)) == CGColorSpaceModel.Monochrome {
+            let oldComponents = CGColorGetComponents(color.CGColor)
+            let colorRef = CGColorCreate(colorSpaceRGB, [oldComponents[0], oldComponents[0], oldComponents[0], oldComponents[1]])!
+            let color = UIColor(CGColor: colorRef)
+
+            return color
+        }
+
+        return self
+    }
+
+    public func isEqualToColor(color: UIColor) -> Bool {
+        let selfColor = self.convertToRGBSpace(self)
+        let otherColor = self.convertToRGBSpace(color)
+
+        return selfColor.isEqual(otherColor)
+    }
 }
