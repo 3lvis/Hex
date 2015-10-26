@@ -12,18 +12,16 @@ This is why I created `Hex`, a simple tiny extension to UIColor that helps you i
 pod 'Hex'
 ```
 
-## Usage
+## Create color
 
-### Create color
-
-#### Swift
+### Swift
 ``` swift
 import Hex
 
 let redColor = UIColor(hex: "FF0000")
 ```
 
-#### Objective-C
+### Objective-C
 
 ```objc
 @import Hex;
@@ -31,7 +29,7 @@ let redColor = UIColor(hex: "FF0000")
 UIColor *color = [[UIColor alloc] initWithHex:@"FF0000"];
 ```
 
-### Check for equal colors
+## Check for equal colors
 
 Using `isEqual` on UIColor doesn't work when you create the color from an `HEX` string, this is because how UIKit handles colors. That's why before comparing a color you have to convert the colors to RGBSpace. Luckly `Hex` contains a helper method that helps you  checking for equal colors, internally this method normalizes the color space of colors.
 
