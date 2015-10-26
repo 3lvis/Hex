@@ -18,10 +18,6 @@ extension UIColor {
         }
     }
 
-    public class func colorFromHex(hex: String) -> UIColor {
-        return UIColor(hex: hex)
-    }
-
     internal func convertToRGBSpace(color: UIColor) -> UIColor {
         let colorSpaceRGB = CGColorSpaceCreateDeviceRGB()
 
