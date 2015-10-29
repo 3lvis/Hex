@@ -31,9 +31,9 @@ class Tests: XCTestCase {
     }
 
     func testClearColor() {
-        let clearHex = UIColor(hex: "CLEAR")
+        let clearColorHex = UIColor(hex: "clearcolor")
         let clear = UIColor.clearColor()
 
-        XCTAssertTrue(clearHex.isEqualToColor(clear))
+        XCTAssertFalse(clearColorHex.isEqualToColor(clear))
     }
 }
