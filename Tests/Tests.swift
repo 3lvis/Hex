@@ -22,4 +22,11 @@ class Tests: XCTestCase {
 
         XCTAssertFalse(whiteHex.isEqualToColor(black))
     }
+
+    func testClearColor() {
+        let clearColorHex = UIColor(hex: "clearcolor")
+        let clear = UIColor.clearColor()
+
+        XCTAssertFalse(clearColorHex.isEqualToColor(clear))
+    }
 }
