@@ -6,7 +6,6 @@ extension UIColor {
      - parameter hex: The base HEX string to create the color.
      */
     public convenience init(hex: String) {
-        let clearKeyword = "CLEAR"
         let noHashString = hex.stringByReplacingOccurrencesOfString("#", withString: "")
         let scanner = NSScanner(string: noHashString)
         scanner.charactersToBeSkipped = NSCharacterSet.symbolCharacterSet()
@@ -21,9 +20,7 @@ extension UIColor {
         }
 
         var hexInt: UInt32 = 0
-        if (noHashString == clearKeyword) {
-            self.init(white: 0, alpha: 0)
-        } else if (scanner.scanHexInt(&hexInt)) {
+        if (scanner.scanHexInt(&hexInt)) {
             let red = (hexInt >> 16) & 0xFF
             let green = (hexInt >> 8) & 0xFF
             let blue = (hexInt) & 0xFF
