@@ -29,6 +29,19 @@ let redColor = UIColor(hex: "FF0000")
 UIColor *color = [[UIColor alloc] initWithHex:@"FF0000"];
 ```
 
+## Translucency
+
+`HEX` doesn't support translucency, since it's only RGB, but we thought why it shouldn't? That's why you can append the translucency percentage at the end of your HEX string. 
+
+Some examples:
+
+```
+UIColor(hex: "#ff0000") => UIColor.redColor()
+UIColor(hex: "#ff000075") => UIColor.redColor().colorWithAlphaComponent(0.75)
+UIColor(hex: "#ff000050") => UIColor.redColor().colorWithAlphaComponent(0.50)
+```
+
+
 ## Check for equal colors
 
 Using `isEqual` on UIColor doesn't work when you create the color from an `HEX` string, this is because how UIKit handles colors. That's why before comparing a color you have to convert the colors to RGBSpace. Luckly `Hex` contains a helper method that helps you  checking for equal colors, internally this method normalizes the color space of colors.
@@ -50,6 +63,7 @@ if ([blackHex isEqualToColor:black]) {
     // Do something
 }
 ```
+
 ## Be Awesome
 
 If something looks stupid, please create a friendly and constructive issue, getting your feedback would be awesome.
