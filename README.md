@@ -36,7 +36,7 @@ UIColor *color = [[UIColor alloc] initWithHex:@"FF0000"];
 Some examples:
 
 ```swift
-UIColor(hex: "#ff0000") => UIColor.redColor()
+UIColor(hex: "#ff0000")   => UIColor.redColor()
 UIColor(hex: "#ff000075") => UIColor.redColor().colorWithAlphaComponent(0.75)
 UIColor(hex: "#ff000050") => UIColor.redColor().colorWithAlphaComponent(0.50)
 ```
