@@ -22,6 +22,13 @@ class Tests: XCTestCase {
 
         XCTAssertFalse(whiteHex.isEqualToColor(black))
     }
+    
+    func testTranslucentRedColor() {
+        let redHex = UIColor(hex: "#ff000050")
+        let red = UIColor.redColor().colorWithAlphaComponent(0.5)
+
+        XCTAssertTrue(redHex.isEqualToColor(red))
+    }
 
     func testClearColor() {
         let clearColorHex = UIColor(hex: "clearcolor")
