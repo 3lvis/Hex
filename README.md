@@ -52,7 +52,7 @@ if ([blackHex isEqualToColor:black]) {
 ```
 ## Be Awesome
 
-If something looks stupid, please create a friendly and constructive issue, getting your feedback would be awesome. 
+If something looks stupid, please create a friendly and constructive issue, getting your feedback would be awesome.
 
 Have a great day.
 
@@ -62,4 +62,4 @@ Elvis Nuñez, [@3lvis](https://twitter.com/3lvis)
 
 ## License
 
-**Hex** is available under the MIT license. See the LICENSE file for more info.
+**Hex** is available under the MIT license. See the [LICENSE](/LICENSE.md) file for more info.
