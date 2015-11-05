@@ -50,7 +50,7 @@ extension UIColor {
      - parameter color: The color to compare.
      - returns: `true` if the colors are equal.
      */
-    public func isEqualToColor(color: UIColor) -> Bool {
+    public func isEqualTo(color: UIColor) -> Bool {
         let selfColor = self.convertToRGBSpace(self)
         let otherColor = self.convertToRGBSpace(color)
 

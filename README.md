@@ -50,7 +50,7 @@ Using `isEqual` on UIColor doesn't work when you create the color from an `HEX` 
 let blackHex = UIColor(hex: "000000")
 let black = UIColor.blackColor()
 
-if blackHex.isEqualToColor(black) {
+if blackHex.isEqualTo(black) {
     // Do something
 }
 ```
@@ -59,7 +59,7 @@ if blackHex.isEqualToColor(black) {
 UIColor *blackHex = [[UIColor alloc] initWithHex: @"000000"];
 UIColor *black = [UIColor blackColor];
 
-if ([blackHex isEqualToColor:black]) {
+if ([blackHex isEqualTo:black]) {
     // Do something
 }
 ```
