@@ -46,8 +46,9 @@ extension UIColor {
     }
 
     /**
+     --> Not working for a few cases because of iOS 10's new color handling.
+
      Checks if two colors are equal.
-     WARNING: Not working for a few cases because of iOS 10's new color handling.
      - parameter color: The color to compare.
      - returns: `true` if the colors are equal.
      */
