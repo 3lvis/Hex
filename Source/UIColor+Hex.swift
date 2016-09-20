@@ -45,17 +45,16 @@ extension UIColor {
         return self
     }
 
+    // --> Not working for a few cases because of iOS 10's new color handling.
     /**
-     --> Not working for a few cases because of iOS 10's new color handling.
-
      Checks if two colors are equal.
      - parameter color: The color to compare.
      - returns: `true` if the colors are equal.
      */
-    public func isEqualTo(_ color: UIColor) -> Bool {
-        let selfColor = self.convertToRGBSpace()
-        let otherColor = color.convertToRGBSpace()
-
-        return selfColor.isEqual(otherColor)
-    }
+//    public func isEqualTo(_ color: UIColor) -> Bool {
+//        let selfColor = self.convertToRGBSpace()
+//        let otherColor = color.convertToRGBSpace()
+//
+//        return selfColor.isEqual(otherColor)
+//    }
 }
