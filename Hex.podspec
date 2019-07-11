@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "Hex"
-  s.version = "6.0.0"
+  s.version = "6.1.0"
   s.summary = "Create colors using hexadecimal (HEX)"
   s.description = <<-DESC
                    * A category on UIColor that adds support for hexadecimal (hex)
