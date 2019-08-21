@@ -1,7 +1,13 @@
+#if os(OSX)
+import Cocoa
+public typealias NSUIColor = NSColor
+#else
 import UIKit
+public typealias NSUIColor = UIColor
+#endif
 
-public extension UIColor {
-    /// Base initializer, it creates an instance of `UIColor` using an HEX string.
+public extension NSUIColor {
+    /// Base initializer, it creates an instance of `NSUIColor` using an HEX string.
     ///
     /// - Parameter hex: The base HEX string to create the color.
     convenience init(hex: String) {
@@ -34,9 +40,9 @@ public extension UIColor {
 
     /// Compares if two colors are equal.
     ///
-    /// - Parameter color: A UIColor to compare.
+    /// - Parameter color: A NSUIColor to compare.
     /// - Returns: A boolean, true if same (or very similar) and false otherwise.
-    func isEqual(to color: UIColor) -> Bool {
+    func isEqual(to color: NSUIColor) -> Bool {
         let currentRGBA = self.RGBA
         let comparedRGBA = color.RGBA
 
@@ -48,12 +54,31 @@ public extension UIColor {
 
 
     /// Get the red, green, blue and alpha values.
-    private var RGBA: [CGFloat] {
+    /// NOTE: This does not work for every color space,
+    /// if the color space is not convertible to RGB then [0,0,0,0] will be returned
+    internal var RGBA: [CGFloat] {
         var r: CGFloat = 0
         var g: CGFloat = 0
         var b: CGFloat = 0
         var a: CGFloat = 0
+        
+        
+        #if os(OSX)
+        if self.colorSpace != NSColorSpace.sRGB {
+            // try to convert to RGB
+            if let color = self.usingColorSpace(.sRGB) {
+                color.getRed(&r, green: &g, blue: &b, alpha: &a)
+            } else {
+                // try anyway and possibly crash
+                self.getRed(&r, green: &g, blue: &b, alpha: &a)
+            }
+        } else {
+            self.getRed(&r, green: &g, blue: &b, alpha: &a)
+        }
+        #else
         self.getRed(&r, green: &g, blue: &b, alpha: &a)
+        #endif
+        
         return [r, g, b, a]
     }
 
